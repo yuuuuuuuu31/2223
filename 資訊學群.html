@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>選才育才輔助系統</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="學群.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+
+    <body>
+            <h1 id="primaryHeading" class="importantHeadings"><strong>資訊 學群</strong></h1>
+            <div class="container">
+                <div class="item">
+                  <a href="資訊管理.html">
+                    <div class="icon"><img src="data-management.png" alt="資訊管理"></div>
+                    <div class="label">資訊管理</div>
+                  </a>
+                </div>
+                <div class="item">
+                    <a href="統計資訊學系.html">
+                      <div class="icon"><img src="bar-chart.png" alt="統計資訊"></div>
+                      <div class="label">統計資訊</div>
+                    </a>
+                </div>
+            </div>
+
+    <div class="container mt-4">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card mb-3 p-3">
+                <h3>簡要介紹</h3>
+                <p><u>以資訊處理各層次的理論與實務技術</u>，包括電腦程式設計與系統、電腦軟硬體結構、網路架設、資訊安全保密、資訊系統的統整、規劃與管理。</p>
+            </div>
+        </div>
+
+    <div class="col-md-6">
+        <div class="card p-3">
+            <h3>學習內容</h3>
+            <p>資訊學群主要學習電腦的軟硬體結構、各種電腦作業系統的原理，進而瞭解各種電腦程式設計的方法、找出電腦程式的錯誤並加以修正。課程中更包括學習資訊系統的統整規畫與管理，電腦保密方法及電腦病毒防治。</p>    
+        </div>
+    </div>
+    
+    <div class="mt-4">
+        <h3>主要學類</h3>
+        <p>生物資訊  資訊傳播  媒體設計  圖書資訊  數位學習  資訊管理  電機工程  光電工程  電子工程  通訊工程  電機資訊  數據統計</p>
+    </div>
+
+    <div class="container mt-4">
+        <div class="d-flex flex-row align-items-center">
+            <div class="flex-grow-1">        
+                <h2>學群內學類間關係圖</h2>
+                <img src="關係空間圖.png" height="600" alt="空間關係圖">
+                <p>註：紅點標示為跨學群之學類</p>
+            </div>
+            <div class="ms-5 text-box">
+                <div class="card p-3">
+                    <p>本學群以資訊工程、通訊工程為學群重心。學類聚集效果鮮明，如左區的光電工程、電子工程、電機資訊、電機工程為一群；通訊工程、資訊工程為一群。另數據統計、資訊管理、圖書資訊、數位學習、資訊傳播、媒體設計等呈現分散狀態，有其獨特性。生涯志向可依據相近位置的學類納為選擇範圍。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+    <div class="card-body">
+    <div style="width: 750px; height: 750px;margin: 0 auto;">
+        <canvas id="radarChart"></canvas>
+    </div>
+
+    <script>
+        const ctx = document.getElementById('radarChart').getContext('2d');
+        const radarChart = new Chart(ctx, {
+            type: 'radar',
+            data: {
+                labels: [
+                    '自我管理', '身心素質與自我精進', '系統思考與問題解決', '科技資訊與媒體素養',
+                    '道德實踐與公民意識', '人際關係與團隊合作', '藝術涵養與美感素養', '語文與文化表達溝通'
+                ],
+                datasets: [{
+                    label: '核心素養比例',
+                    data: [8.37, 19.56, 14.44, 12.86, 21.77, 3.84, 2.83, 14.10],
+                    backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                    borderColor: 'rgba(75, 192, 192, 1)',
+                    pointBackgroundColor: 'rgba(75, 192, 192, 1)',
+                }]
+            },
+            
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                    labels: {
+                        font: {
+                        size: 16
+                        },
+                        color: 'black'
+                    }
+                    }
+                },
+                scales: {
+                    r: {
+                        pointLabels: {
+                            color:'black',
+                            font: {
+                                size: 14
+                            }
+                        },
+                        grid:{
+                            color:'gray'
+                        },
+                        angleLines:{
+                            color:'gray'
+                        },
+                        suggestedMin: 0,
+                        suggestedMax: 25
+                    }
+                }
+            }
+        });
+    </script>
+    </div>
+    </div>
+    <h6>圖表來源為學群內各校系之重視百分比的平均值，加總為100%；百分比越高，代表越重視。</h6>
+    <hr>
+
+    <div class="col-md-6">
+        <div class="card p-3">
+            <h3>重要學科</h3>
+            <p>數學 資訊科技 英語文 國語文 物理 生活科技</p>
+        </div>
+    </div>
+
+    <div class="col-md-6">
+        <div class="card p-1">
+            <h3>加深加廣</h3>
+            <p>數學甲 進階程式設計 語文表達與傳播應用 英文閱讀與寫作 英語聽講 數學乙 科技應用專題 工程設計專題</p>
+        </div>
+    </div>
+
+    <div class="col-md-6">
+        <div class="card p-3">
+            <h3>多元能力</h3>
+            <p>程式設計 數理科學 邏輯推理 主動學習 問題解決 語文理解與表達 </p>
+        </div>
+    </div>
+
+    <div class="col-md-6">
+        <div class="card p-3">
+            <h3>性格特質</h3>
+            <p>主動積極 堅毅負責 合作互助</p>
+        </div>
+    </div>
+
+    <div class="mt-4">
+        <h3>生涯發展</h3>
+        <p>資訊／軟體／系統相關職類   工程／研發／生技相關職類</p>
+    </div>
+
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
