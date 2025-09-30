@@ -1,6 +1,6 @@
 <?php include('header.php'); ?>
 <header class="masthead bg-primary text-black">
-  <h1>吳濟聰的學習歷程</h1>
+  <h1>學習歷程</h1>
 </header>
 <div class="container">
     <div class="card">
@@ -135,4 +135,5 @@
         });
       </script>
     </div>  
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-qQL5nFihf1u6lftAeG7kFlTrjXN/SwG2i9LC9NxKw0DQq0q3N4pEVL2re6bmKp1U" crossorigin="anonymous"></script>
